@@ -12,18 +12,17 @@ public class count_pair {
         }
         Arrays.sort(a);
         int result = 0;
-        int i = 0;
-        while(i < n){
-            int count = 1;
-            while (i + 1 < n && a[i] == a[i+1]){
+        int count = 1;
+        for (int i = 1; i < n; i++){
+            if (a[i] == a[i-1]){
                 count++;
-                i++;
             }
-            if (count > 1){
-                result += (count*(count-1))/2;
+            else{
+                result += count*(count-1)/2;
+                count = 1;
             }
-            i++;
         }
+        result += count*(count-1)/2;
         System.out.println(result);
     }
 }
