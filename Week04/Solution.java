@@ -35,9 +35,7 @@ class Result {
             a.set(j+1,tam);
             printArray(a);
         }
-
     }
-
 }
 
 public class Solution {
