@@ -20,13 +20,9 @@ public class w10_25021779  {
                 return new Result(A[i], A[j]);
             }
         }
-
-        // B4: Chia để trị[cite: 19]
         int diemChia = (i + j) / 2;
         Result left = maxMin(A, i, diemChia);
         Result right = maxMin(A, diemChia + 1, j);
-
-        // Kết hợp kết quả[cite: 19]
         int maxVal = (left.max < right.max) ? right.max : left.max;
         int minVal = (left.min < right.min) ? left.min : right.min;
         return new Result(maxVal, minVal);
